@@ -24,6 +24,6 @@ func TestMergeTwoLists(t *testing.T) {
 	for _, testCase := range testCases {
 		actual := mergeTwoLists(FromSlice(testCase.gotList1), FromSlice(testCase.gotList2))
 
-		assert.Check(t, is.DeepEqual(ToSlice(actual), testCase.want))
+		assert.Check(t, is.DeepEqual(actual.ToSlice(), testCase.want))
 	}
 }

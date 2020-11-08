@@ -1,5 +1,7 @@
 package structs
 
+import "errors"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -25,13 +27,26 @@ func FromSlice(input []int) *ListNode {
 	return first
 }
 
-func ToSlice(list *ListNode) []int {
+func (list *ListNode) ToSlice() []int {
 	slice := make([]int, 0)
 
-	for list != nil {
-		slice = append(slice, list.Val)
-		list = list.Next
+	current := list
+	for current != nil {
+		slice = append(slice, current.Val)
+		current = current.Next
 	}
 
 	return slice
+}
+
+func (list *ListNode) NodeAt(index int) (*ListNode, error) {
+	current := list
+	for i := 0; i < index; i++ {
+		if current.Next == nil {
+			return nil, errors.New("out of bound")
+		}
+		current = current.Next
+	}
+
+	return current, nil
 }
