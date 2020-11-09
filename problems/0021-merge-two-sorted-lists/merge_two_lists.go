@@ -9,22 +9,23 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	current := dummyHead
 
 	for l1 != nil && l2 != nil {
-		var val int
+		var node *ListNode
 		if l1.Val < l2.Val {
-			val = l1.Val
+			node = l1
 			l1 = l1.Next
 		} else {
-			val = l2.Val
+			node = l2
 			l2 = l2.Next
 		}
-		current.Next = &ListNode{Val: val}
-		current = current.Next
+		current.Next = node
+		current = node
 	}
 
-	if l1 == nil {
-		current.Next = l2
-	} else {
+	if l1 != nil {
 		current.Next = l1
+	} else {
+		current.Next = l2
 	}
+
 	return dummyHead.Next
 }
