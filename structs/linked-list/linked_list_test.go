@@ -1,4 +1,4 @@
-package structs
+package linked_list
 
 import (
 	"testing"

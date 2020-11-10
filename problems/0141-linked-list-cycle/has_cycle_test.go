@@ -1,7 +1,7 @@
 package _141_linked_list_cycle
 
 import (
-	. "github.com/evleria/leetcode-in-go/structs"
+	. "github.com/evleria/leetcode-in-go/structs/linked-list"
 	"testing"
 
 	"gotest.tools/v3/assert"

@@ -1,7 +1,7 @@
 package _083_remove_duplicates_from_sorted_list
 
 import (
-	. "github.com/evleria/leetcode-in-go/structs"
+	. "github.com/evleria/leetcode-in-go/structs/linked-list"
 )
 
 func deleteDuplicates(head *ListNode) *ListNode {

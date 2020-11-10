@@ -1,7 +1,7 @@
 package _141_linked_list_cycle
 
 import (
-	. "github.com/evleria/leetcode-in-go/structs"
+	. "github.com/evleria/leetcode-in-go/structs/linked-list"
 )
 
 func hasCycle(head *ListNode) bool {

@@ -1,7 +1,7 @@
 package _021_merge_two_sorted_lists
 
 import (
-	. "github.com/evleria/leetcode-in-go/structs"
+	. "github.com/evleria/leetcode-in-go/structs/linked-list"
 )
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
