@@ -1,4 +1,4 @@
-package _070_Climbing_stairs
+package _070_climbing_stairs
 
 import (
 	"testing"
