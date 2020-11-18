@@ -21,6 +21,7 @@ func TestLongestPalindrome(t *testing.T) {
 			want: "bb",
 		},
 	}
+
 	for _, testCase := range testCases {
 		actual := longestPalindrome(testCase.got)
 
