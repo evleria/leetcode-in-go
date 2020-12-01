@@ -41,3 +41,27 @@ func FromSlice(input []int) *TreeNode {
 
 	return root
 }
+
+func (root *TreeNode) ToSlice() []int {
+	if root == nil {
+		return []int{}
+	}
+
+	queue, result := make([]*TreeNode, 1), make([]int, 0, 16)
+
+	queue[0] = root
+	l := 1
+
+	for len(queue) != 0 {
+		if cur := queue[0]; cur != nil {
+			result = append(result, cur.Val)
+			l = len(result)
+			queue = append(queue, cur.Left, cur.Right)
+		} else {
+			result = append(result, NULL)
+		}
+		queue = queue[1:]
+	}
+
+	return result[:l]
+}
