@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestTwoSum(t *testing.T) {
+func TestMoveZeroes(t *testing.T) {
 	testCases := []struct {
 		got  []int
 		want []int

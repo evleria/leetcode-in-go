@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestTwoSum(t *testing.T) {
+func TestFindMedianSortedArrays(t *testing.T) {
 	testCases := []struct {
 		gotNums1 []int
 		gotNums2 []int
