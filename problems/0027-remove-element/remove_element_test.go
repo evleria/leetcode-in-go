@@ -12,26 +12,26 @@ func TestRemoveElement(t *testing.T) {
 		gotNums    []int
 		gotVal     int
 		wantNums   []int
-		wantLenght int
+		wantLength int
 	}{
 		{
 			gotNums:    []int{3, 2, 2, 3},
 			gotVal:     3,
 			wantNums:   []int{2, 2},
-			wantLenght: 2,
+			wantLength: 2,
 		},
 		{
 			gotNums:    []int{0, 1, 2, 2, 3, 0, 4, 2},
 			gotVal:     2,
 			wantNums:   []int{0, 1, 3, 0, 4},
-			wantLenght: 5,
+			wantLength: 5,
 		},
 	}
 
 	for _, testCase := range testCases {
 		actual := removeElement(testCase.gotNums, testCase.gotVal)
 
-		assert.Check(t, is.DeepEqual(testCase.gotNums[:testCase.wantLenght], testCase.wantNums))
-		assert.Check(t, is.Equal(actual, testCase.wantLenght))
+		assert.Check(t, is.DeepEqual(testCase.gotNums[:testCase.wantLength], testCase.wantNums))
+		assert.Check(t, is.Equal(actual, testCase.wantLength))
 	}
 }
