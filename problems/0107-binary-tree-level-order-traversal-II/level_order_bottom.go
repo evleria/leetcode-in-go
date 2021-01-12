@@ -9,8 +9,8 @@ func levelOrderBottom(root *TreeNode) [][]int {
 		return [][]int{}
 	}
 
-	result, queue := make([][]int, 0, 16), make([]*TreeNode, 1, 16)
-	queue[0] = root
+	var result [][]int
+	queue := []*TreeNode{root}
 
 	for len(queue) != 0 {
 		level := make([]int, 0, 16)
