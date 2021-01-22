@@ -3,33 +3,30 @@ package _054_spiral_matrix
 func spiralOrder(matrix [][]int) []int {
 	m, n := len(matrix), len(matrix[0])
 	result := make([]int, 0, m*n)
-	loops := (min(m, n) + 1) / 2
 
-	for x := 0; x < loops; x++ {
-		for j := x; j < n-x; j++ {
-			result = append(result, matrix[x][j])
+	top, right, bottom, left := 0, n-1, m-1, 0
+	for len(result) < m*n {
+		for i := left; i <= right; i++ {
+			result = append(result, matrix[top][i])
 		}
-		for i := 1 + x; i < m-1-x; i++ {
-			result = append(result, matrix[i][n-1-x])
+		top++
+		for i := top; i <= bottom; i++ {
+			result = append(result, matrix[i][right])
 		}
-		if x != m-1-x {
-			for j := n - 1 - x; j >= x; j-- {
-				result = append(result, matrix[m-1-x][j])
+		right--
+		if top <= bottom {
+			for i := right; i >= left; i-- {
+				result = append(result, matrix[bottom][i])
 			}
-			if x != n-1-x {
-				for i := m - 2 - x; i >= 1+x; i-- {
-					result = append(result, matrix[i][x])
+			bottom--
+			if right >= left {
+				for i := bottom; i >= top; i-- {
+					result = append(result, matrix[i][left])
 				}
+				left++
 			}
 		}
-	}
 
+	}
 	return result
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }
