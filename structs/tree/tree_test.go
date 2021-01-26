@@ -22,3 +22,40 @@ func TestFromToSlice(t *testing.T) {
 		assert.Check(t, is.DeepEqual(slice, testCase))
 	}
 }
+
+/*
+root := &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 3,
+			Right: &TreeNode{
+				Val: 4,
+			},
+		},
+		Right: &TreeNode{
+			Val: 7,
+			Left: &TreeNode{
+				Val: 6,
+			},
+			Right: &TreeNode{
+				Val: 8,
+			},
+		}}*/
+func TestFindInBST(t *testing.T) {
+	testCases := []struct {
+		gotNums   []int
+		gotTarget int
+	}{
+		{
+			gotNums:   []int{5, 3, 7, NULL, 4, 6, 8},
+			gotTarget: 7,
+		},
+	}
+
+	for _, testCase := range testCases {
+		tree := FromSlice(testCase.gotNums)
+		actual := tree.FindInBST(testCase.gotTarget)
+
+		assert.Check(t, is.Equal(actual.Val, testCase.gotTarget))
+	}
+}

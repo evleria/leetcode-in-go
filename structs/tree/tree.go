@@ -65,3 +65,18 @@ func (root *TreeNode) ToSlice() []int {
 
 	return result[:l]
 }
+
+func (root *TreeNode) FindInBST(n int) *TreeNode {
+	switch {
+	case root == nil:
+		return nil
+	case root.Val == n:
+		return root
+	case root.Val > n:
+		return root.Left.FindInBST(n)
+	case root.Val < n:
+		return root.Right.FindInBST(n)
+	}
+
+	return nil
+}
