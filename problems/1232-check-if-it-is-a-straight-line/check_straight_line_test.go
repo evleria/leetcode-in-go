@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestChekStraightLine(t *testing.T) {
+func TestCheckStraightLine(t *testing.T) {
 	testCases := []struct {
 		got  [][]int
 		want bool
