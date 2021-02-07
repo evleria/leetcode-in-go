@@ -23,24 +23,6 @@ func TestFromToSlice(t *testing.T) {
 	}
 }
 
-/*
-root := &TreeNode{
-		Val: 5,
-		Left: &TreeNode{
-			Val: 3,
-			Right: &TreeNode{
-				Val: 4,
-			},
-		},
-		Right: &TreeNode{
-			Val: 7,
-			Left: &TreeNode{
-				Val: 6,
-			},
-			Right: &TreeNode{
-				Val: 8,
-			},
-		}}*/
 func TestFindInBST(t *testing.T) {
 	testCases := []struct {
 		gotNums   []int

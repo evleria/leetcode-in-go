@@ -13,7 +13,7 @@ func TestCanFinish(t *testing.T) {
 		gotPrerequisites [][]int
 		want             bool
 	}{
-		/*{
+		{
 			gotNumCourses: 2,
 			gotPrerequisites: [][]int{
 				{1, 0},
@@ -27,7 +27,7 @@ func TestCanFinish(t *testing.T) {
 				{0, 1},
 			},
 			want: false,
-		},*/
+		},
 		{
 			gotNumCourses: 4,
 			gotPrerequisites: [][]int{

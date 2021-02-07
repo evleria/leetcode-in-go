@@ -12,14 +12,14 @@ func TestLetterCombinations(t *testing.T) {
 		got  string
 		want []string
 	}{
-		/*{
+		{
 			got:  "",
 			want: []string{},
 		},
 		{
 			got:  "2",
 			want: []string{"a", "b", "c"},
-		},*/
+		},
 		{
 			got:  "23",
 			want: []string{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"},
