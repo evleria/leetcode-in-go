@@ -80,3 +80,16 @@ func (root *TreeNode) FindInBST(n int) *TreeNode {
 
 	return nil
 }
+
+func (root *TreeNode) FindInBT(n int) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	if root.Val == n {
+		return root
+	}
+	if left := root.Left.FindInBT(n); left != nil {
+		return left
+	}
+	return root.Right.FindInBT(n)
+}

@@ -41,3 +41,22 @@ func TestFindInBST(t *testing.T) {
 		assert.Check(t, is.Equal(actual.Val, testCase.gotTarget))
 	}
 }
+
+func TestFindInBT(t *testing.T) {
+	testCases := []struct {
+		gotNums   []int
+		gotTarget int
+	}{
+		{
+			gotNums:   []int{5, 3, 7, NULL, 4, 6, 8},
+			gotTarget: 7,
+		},
+	}
+
+	for _, testCase := range testCases {
+		tree := FromSlice(testCase.gotNums)
+		actual := tree.FindInBT(testCase.gotTarget)
+
+		assert.Check(t, is.Equal(actual.Val, testCase.gotTarget))
+	}
+}
