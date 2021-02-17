@@ -5,19 +5,15 @@ import (
 )
 
 func inorderTraversal(root *TreeNode) []int {
-	result := make([]int, 0, 4)
-
-	writeInorder(root, &result)
-
+	result := []int{}
+	inorderWrite(&result, root)
 	return result
 }
 
-func writeInorder(node *TreeNode, result *[]int) {
-	if node == nil {
-		return
+func inorderWrite(result *[]int, root *TreeNode) {
+	if root != nil {
+		inorderWrite(result, root.Left)
+		*result = append(*result, root.Val)
+		inorderWrite(result, root.Right)
 	}
-
-	writeInorder(node.Left, result)
-	*result = append(*result, node.Val)
-	writeInorder(node.Right, result)
 }
