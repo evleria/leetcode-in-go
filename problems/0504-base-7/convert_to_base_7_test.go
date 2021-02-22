@@ -13,6 +13,10 @@ func TestConvertToBase7(t *testing.T) {
 		want    string
 	}{
 		{
+			gotNums: 0,
+			want:    "0",
+		},
+		{
 			gotNums: 100,
 			want:    "202",
 		},
