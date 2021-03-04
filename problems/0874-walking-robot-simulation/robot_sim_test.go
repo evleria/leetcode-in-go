@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestRobotSlim(t *testing.T) {
+func TestRobotSim(t *testing.T) {
 	testCases := []struct {
 		gotCommands  []int
 		gotObstacles [][]int
