@@ -1,9 +1,10 @@
 package _841_keys_and_rooms
 
 import (
+	"testing"
+
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
-	"testing"
 )
 
 func TestCanVisitAllRooms(t *testing.T) {
