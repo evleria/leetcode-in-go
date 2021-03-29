@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestTwoSum(t *testing.T) {
+func TestCanConstruct(t *testing.T) {
 	testCases := []struct {
 		gotNote     string
 		gotMagazine string
