@@ -1,4 +1,4 @@
-package _645__set_mismatch
+package _645_set_mismatch
 
 import (
 	"testing"
