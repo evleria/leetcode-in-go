@@ -30,7 +30,7 @@ func TestLowestCommonAncestor(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase.gotTree)
+		tree := BinaryTreeFromSlice(testCase.gotTree)
 		actual := lowestCommonAncestor(tree, tree.FindInBT(testCase.gotP), tree.FindInBT(testCase.gotQ))
 
 		assert.Check(t, is.Equal(actual.Val, testCase.want))

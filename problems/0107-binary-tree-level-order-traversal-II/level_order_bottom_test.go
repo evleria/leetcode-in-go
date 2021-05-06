@@ -24,7 +24,7 @@ func TestLevelOrderBottom(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := levelOrderBottom(FromSlice(testCase.got))
+		actual := levelOrderBottom(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

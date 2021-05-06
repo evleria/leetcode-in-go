@@ -20,7 +20,7 @@ func TestReverseList(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := reverseList(FromSlice(testCase.got)).ToSlice()
+		actual := reverseList(LinkedListFromSlice(testCase.got)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

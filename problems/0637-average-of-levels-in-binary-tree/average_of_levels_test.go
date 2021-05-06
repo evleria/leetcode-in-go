@@ -20,7 +20,7 @@ func TestAverageOfLevels(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := averageOfLevels(FromSlice(testCase.got))
+		actual := averageOfLevels(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

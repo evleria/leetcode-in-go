@@ -16,7 +16,7 @@ func TestFromToSlice(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase)
+		tree := BinaryTreeFromSlice(testCase)
 		slice := tree.ToSlice()
 
 		assert.Check(t, is.DeepEqual(slice, testCase))
@@ -35,7 +35,7 @@ func TestFindInBST(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase.gotNums)
+		tree := BinaryTreeFromSlice(testCase.gotNums)
 		actual := tree.FindInBST(testCase.gotTarget)
 
 		assert.Check(t, is.Equal(actual.Val, testCase.gotTarget))
@@ -54,7 +54,7 @@ func TestFindInBT(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase.gotNums)
+		tree := BinaryTreeFromSlice(testCase.gotNums)
 		actual := tree.FindInBT(testCase.gotTarget)
 
 		assert.Check(t, is.Equal(actual.Val, testCase.gotTarget))

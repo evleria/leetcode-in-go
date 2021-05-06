@@ -22,7 +22,7 @@ func TestRemoveElements(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := removeElements(FromSlice(testCase.gotList), testCase.gotVal).ToSlice()
+		actual := removeElements(LinkedListFromSlice(testCase.gotList), testCase.gotVal).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

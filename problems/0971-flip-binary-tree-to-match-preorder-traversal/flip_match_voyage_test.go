@@ -32,7 +32,7 @@ func TestFlipMatchVoyage(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := flipMatchVoyage(FromSlice(testCase.gotTree), testCase.gotVoyage)
+		actual := flipMatchVoyage(BinaryTreeFromSlice(testCase.gotTree), testCase.gotVoyage)
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

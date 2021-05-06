@@ -33,7 +33,7 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := addTwoNumbers(FromSlice(testCase.gotList1), FromSlice(testCase.gotList2)).ToSlice()
+		actual := addTwoNumbers(LinkedListFromSlice(testCase.gotList1), LinkedListFromSlice(testCase.gotList2)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

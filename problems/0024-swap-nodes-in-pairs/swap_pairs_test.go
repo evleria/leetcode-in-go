@@ -28,7 +28,7 @@ func TestSwapPairs(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := swapPairs(FromSlice(testCase.got)).ToSlice()
+		actual := swapPairs(LinkedListFromSlice(testCase.got)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

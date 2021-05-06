@@ -27,7 +27,7 @@ func TestIsSameTree(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := isSameTree(FromSlice(testCase.got1), FromSlice(testCase.got2))
+		actual := isSameTree(BinaryTreeFromSlice(testCase.got1), BinaryTreeFromSlice(testCase.got2))
 
 		assert.Check(t, is.Equal(actual, testCase.want))
 	}

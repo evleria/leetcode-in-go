@@ -24,7 +24,7 @@ func TestDeleteDuplicates(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := deleteDuplicates(FromSlice(testCase.got)).ToSlice()
+		actual := deleteDuplicates(LinkedListFromSlice(testCase.got)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

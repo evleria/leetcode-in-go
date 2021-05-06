@@ -20,7 +20,7 @@ func TestInvertTree(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := invertTree(FromSlice(testCase.got)).ToSlice()
+		actual := invertTree(BinaryTreeFromSlice(testCase.got)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

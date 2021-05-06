@@ -22,7 +22,7 @@ func TestMergeTrees(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := mergeTrees(FromSlice(testCase.gotTree1), FromSlice(testCase.gotTree2)).ToSlice()
+		actual := mergeTrees(BinaryTreeFromSlice(testCase.gotTree1), BinaryTreeFromSlice(testCase.gotTree2)).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

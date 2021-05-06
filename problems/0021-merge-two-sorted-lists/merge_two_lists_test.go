@@ -22,7 +22,7 @@ func TestMergeTwoLists(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := mergeTwoLists(FromSlice(testCase.gotList1), FromSlice(testCase.gotList2))
+		actual := mergeTwoLists(LinkedListFromSlice(testCase.gotList1), LinkedListFromSlice(testCase.gotList2))
 
 		assert.Check(t, is.DeepEqual(actual.ToSlice(), testCase.want))
 	}

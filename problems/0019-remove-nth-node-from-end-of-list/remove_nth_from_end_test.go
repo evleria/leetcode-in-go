@@ -27,7 +27,7 @@ func TestRemoveNthFromEnd(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := removeNthFromEnd(FromSlice(testCase.gotList), testCase.gotN).ToSlice()
+		actual := removeNthFromEnd(LinkedListFromSlice(testCase.gotList), testCase.gotN).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

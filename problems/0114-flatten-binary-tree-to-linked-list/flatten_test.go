@@ -20,7 +20,7 @@ func TestFlatten(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase.got)
+		tree := BinaryTreeFromSlice(testCase.got)
 		flatten(tree)
 
 		assert.Check(t, is.DeepEqual(tree.ToSlice(), testCase.want), testCase.got)

@@ -10,7 +10,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func FromSlice(input []int) *TreeNode {
+func BinaryTreeFromSlice(input []int) *TreeNode {
 	if len(input) == 0 {
 		return nil
 	}

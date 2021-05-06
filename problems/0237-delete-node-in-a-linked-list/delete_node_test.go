@@ -22,7 +22,7 @@ func TestDeleteNode(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		list := FromSlice(testCase.gotList)
+		list := LinkedListFromSlice(testCase.gotList)
 		node, _ := list.NodeAt(testCase.gotNodeIndex)
 
 		deleteNode(node)

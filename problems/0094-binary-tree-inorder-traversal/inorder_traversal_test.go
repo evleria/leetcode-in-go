@@ -20,7 +20,7 @@ func TestInorderTraversal(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := inorderTraversal(FromSlice(testCase.got))
+		actual := inorderTraversal(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

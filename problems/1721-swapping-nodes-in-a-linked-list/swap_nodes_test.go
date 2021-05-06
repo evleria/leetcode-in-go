@@ -27,7 +27,7 @@ func TestSwapNodes(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := swapNodes(FromSlice(testCase.got), testCase.gotK).ToSlice()
+		actual := swapNodes(LinkedListFromSlice(testCase.got), testCase.gotK).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want), testCase.got)
 	}

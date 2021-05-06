@@ -20,7 +20,7 @@ func TestMaxDepth(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := maxDepth(FromSlice(testCase.got))
+		actual := maxDepth(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want), testCase.got)
 	}

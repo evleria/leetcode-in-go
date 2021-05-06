@@ -24,7 +24,7 @@ func TestSumNumbers(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := sumNumbers(FromSlice(testCase.got))
+		actual := sumNumbers(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want), testCase.got)
 	}

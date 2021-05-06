@@ -33,8 +33,8 @@ func TestGetIntersectionNode(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		listA := FromSlice(testCase.gotListA)
-		listB := FromSlice(testCase.gotListB)
+		listA := LinkedListFromSlice(testCase.gotListA)
+		listB := LinkedListFromSlice(testCase.gotListB)
 		if testCase.gotSkipA != 0 && testCase.gotSkipB != 0 {
 			targetNode, _ := listA.NodeAt(testCase.gotSkipA)
 			sourceNode, _ := listB.NodeAt(testCase.gotSkipB - 1)

@@ -14,7 +14,7 @@ func TestFromToSlice(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		list := FromSlice(testCase)
+		list := LinkedListFromSlice(testCase)
 		slice := list.ToSlice()
 
 		assert.Check(t, is.DeepEqual(slice, testCase))
@@ -41,7 +41,7 @@ func TestListNode_NodeAt(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual, err := FromSlice(testCase.gotList).NodeAt(testCase.gotIndex)
+		actual, err := LinkedListFromSlice(testCase.gotList).NodeAt(testCase.gotIndex)
 
 		if len(testCase.wantErr) != 0 {
 			assert.Error(t, err, testCase.wantErr)

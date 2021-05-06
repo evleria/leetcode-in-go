@@ -24,7 +24,7 @@ func TestRob(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		tree := FromSlice(testCase.gotTree)
+		tree := BinaryTreeFromSlice(testCase.gotTree)
 		actual := rob(tree)
 
 		assert.Check(t, is.Equal(actual, testCase.want))

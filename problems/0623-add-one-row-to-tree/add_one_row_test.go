@@ -24,7 +24,7 @@ func TestAddOneRow(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := addOneRow(FromSlice(testCase.gotRoot), testCase.gotV, testCase.gotD).ToSlice()
+		actual := addOneRow(BinaryTreeFromSlice(testCase.gotRoot), testCase.gotV, testCase.gotD).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

@@ -27,7 +27,7 @@ func TestHasPathSum(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := hasPathSum(FromSlice(testCase.gotTree), testCase.gotSum)
+		actual := hasPathSum(BinaryTreeFromSlice(testCase.gotTree), testCase.gotSum)
 
 		assert.Check(t, is.Equal(actual, testCase.want))
 	}

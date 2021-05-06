@@ -32,7 +32,7 @@ func TestHasCycle(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		list := FromSlice(testCase.gotList)
+		list := LinkedListFromSlice(testCase.gotList)
 
 		if testCase.gotCycleTo != -1 {
 			lastNode, _ := list.NodeAt(len(testCase.gotList) - 1)

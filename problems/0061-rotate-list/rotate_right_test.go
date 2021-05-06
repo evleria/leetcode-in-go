@@ -37,7 +37,7 @@ func TestRotateRight(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := rotateRight(FromSlice(testCase.gotHead), testCase.gotK).ToSlice()
+		actual := rotateRight(LinkedListFromSlice(testCase.gotHead), testCase.gotK).ToSlice()
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}

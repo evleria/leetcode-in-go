@@ -28,7 +28,7 @@ func TestIsSymmetric(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := isSymmetric(FromSlice(testCase.got))
+		actual := isSymmetric(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want), testCase.got)
 	}

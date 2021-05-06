@@ -24,7 +24,7 @@ func TestDeepLeavesSum(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := deepestLeavesSum(FromSlice(testCase.got))
+		actual := deepestLeavesSum(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want))
 	}

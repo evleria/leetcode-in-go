@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func FromSlice(input []int) *ListNode {
+func LinkedListFromSlice(input []int) *ListNode {
 	if len(input) == 0 {
 		return nil
 	}

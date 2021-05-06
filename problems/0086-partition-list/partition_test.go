@@ -27,7 +27,7 @@ func TestPartition(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := partition(FromSlice(testCase.gotList), testCase.gotX)
+		actual := partition(LinkedListFromSlice(testCase.gotList), testCase.gotX)
 
 		assert.Check(t, is.DeepEqual(actual.ToSlice(), testCase.want))
 	}

@@ -32,7 +32,7 @@ func TestIsPalindrome(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := isPalindrome(FromSlice(testCase.got))
+		actual := isPalindrome(LinkedListFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want))
 	}

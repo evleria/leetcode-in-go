@@ -20,7 +20,7 @@ func TestIsSameTree(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		actual := diameterOfBinaryTree(FromSlice(testCase.got))
+		actual := diameterOfBinaryTree(BinaryTreeFromSlice(testCase.got))
 
 		assert.Check(t, is.Equal(actual, testCase.want), testCase.got)
 	}
