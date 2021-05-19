@@ -14,15 +14,15 @@ func TestFindDuplicate(t *testing.T) {
 		{
 			got: []string{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"},
 			want: [][]string{
-				{"root/a/2.txt", "root/c/d/4.txt", "root/4.txt"},
 				{"root/a/1.txt", "root/c/3.txt"},
+				{"root/a/2.txt", "root/c/d/4.txt", "root/4.txt"},
 			},
 		},
 		{
 			got: []string{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)"},
 			want: [][]string{
-				{"root/a/2.txt", "root/c/d/4.txt"},
 				{"root/a/1.txt", "root/c/3.txt"},
+				{"root/a/2.txt", "root/c/d/4.txt"},
 			},
 		},
 	}
@@ -30,6 +30,6 @@ func TestFindDuplicate(t *testing.T) {
 	for _, testCase := range testCases {
 		actual := findDuplicate(testCase.got)
 
-		assert.Check(t, is.Equal(actual, testCase.want))
+		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}
 }
