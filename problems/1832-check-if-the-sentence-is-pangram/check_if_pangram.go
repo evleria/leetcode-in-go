@@ -1,15 +1,12 @@
 package _832_check_if_the_sentence_is_pangram
 
 func checkIfPangram(sentence string) bool {
-	if len(sentence) < 26 {
-		return false
-	}
-	seen, count := [26]bool{}, 0
-	for i := 0; i < len(sentence) && count < 26; i++ {
+	seen, left := [26]bool{}, 26
+	for i := 0; i < len(sentence) && left > 0 && len(sentence)-i >= left; i++ {
 		if !seen[sentence[i]-'a'] {
 			seen[sentence[i]-'a'] = true
-			count++
+			left--
 		}
 	}
-	return count == 26
+	return left == 0
 }
