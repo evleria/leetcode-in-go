@@ -16,14 +16,14 @@ func TestShortestSuperstring(t *testing.T) {
 			got:  []string{"abc", "cde", "de"},
 			want: "abcde",
 		},
-		/*{
+		{
 			got:  []string{"alex", "loves", "leetcode"},
 			want: "leetcodelovesalex",
 		},
 		{
 			got:  []string{"catg", "ctaagt", "gcta", "ttca", "atgcatc"},
 			want: "gctaagttcatgcatc",
-		},*/
+		},
 	}
 
 	for _, testCase := range testCases {
