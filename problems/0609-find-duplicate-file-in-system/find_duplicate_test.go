@@ -1,6 +1,7 @@
 package _609_find_duplicate_file_in_system
 
 import (
+	"github.com/evleria/leetcode-in-go/utils"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"testing"
@@ -30,6 +31,6 @@ func TestFindDuplicate(t *testing.T) {
 	for _, testCase := range testCases {
 		actual := findDuplicate(testCase.got)
 
-		assert.Check(t, is.DeepEqual(actual, testCase.want))
+		assert.Check(t, is.DeepEqual(utils.DetermineSliceOfSlicesOfStrings(actual), utils.DetermineSliceOfSlicesOfStrings(testCase.want)))
 	}
 }
