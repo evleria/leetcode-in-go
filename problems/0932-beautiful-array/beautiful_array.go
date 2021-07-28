@@ -8,6 +8,8 @@ func beautifulArray(n int) []int {
 			if x := i*2 - 1; x <= n {
 				temp = append(temp, x)
 			}
+		}
+		for _, i := range result {
 			if x := i * 2; x <= n {
 				temp = append(temp, x)
 			}

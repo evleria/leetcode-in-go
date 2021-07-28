@@ -14,11 +14,11 @@ func TestBeautifulArray(t *testing.T) {
 	}{
 		{
 			got:  4,
-			want: []int{2, 1, 4, 3},
+			want: []int{1, 3, 2, 4},
 		},
 		{
 			got:  5,
-			want: []int{3, 1, 2, 5, 4},
+			want: []int{1, 5, 3, 2, 4},
 		},
 	}
 
