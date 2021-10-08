@@ -1,4 +1,4 @@
-package _67_valid_perfect_square
+package _367_valid_perfect_square
 
 import (
 	"testing"
