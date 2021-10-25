@@ -6,30 +6,26 @@ import (
 )
 
 type entry struct {
-	ch    byte
+	ch    rune
 	count int
 }
 
 func frequencySort(s string) string {
-	m := map[byte]int{}
-	for i := 0; i < len(s); i++ {
-		m[s[i]]++
+	entries := [128]entry{}
+
+	for _, ch := range s {
+		entries[ch] = entry{ch, entries[ch].count + 1}
 	}
 
-	entries := make([]entry, 0, len(m))
-	for ch, count := range m {
-		entries = append(entries, entry{ch, count})
-	}
-
-	sort.Slice(entries, func(i, j int) bool {
+	sort.Slice(entries[:], func(i, j int) bool {
 		return entries[i].count > entries[j].count
 	})
 
 	var sb strings.Builder
 	sb.Grow(len(s))
-	for _, e := range entries {
-		for i := 0; i < e.count; i++ {
-			sb.WriteByte(e.ch)
+	for i := 0; i < len(entries) && entries[i].count > 0; i++ {
+		for j := 0; j < entries[i].count; j++ {
+			sb.WriteRune(entries[i].ch)
 		}
 	}
 

@@ -18,7 +18,7 @@ func TestFrequencySort(t *testing.T) {
 		},
 		{
 			got:  "cccaaa",
-			want: "cccaaa",
+			want: "aaaccc",
 		},
 		{
 			got:  "Aabb",
