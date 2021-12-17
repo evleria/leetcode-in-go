@@ -13,11 +13,11 @@ func TestFindMinHeightTrees(t *testing.T) {
 		gotEdges [][]int
 		want     []int
 	}{
-		/*{
+		{
 			gotN:     4,
 			gotEdges: [][]int{{1, 0}, {1, 2}, {1, 3}},
 			want:     []int{1},
-		},*/
+		},
 		{
 			gotN:     6,
 			gotEdges: [][]int{{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}},
