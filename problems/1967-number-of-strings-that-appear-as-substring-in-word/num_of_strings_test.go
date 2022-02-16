@@ -7,7 +7,7 @@ import (
 	is "gotest.tools/v3/assert/cmp"
 )
 
-func TestReversePrefix(t *testing.T) {
+func TestNumOfStrings(t *testing.T) {
 	testCases := []struct {
 		gotPatterns []string
 		gotWord     string
