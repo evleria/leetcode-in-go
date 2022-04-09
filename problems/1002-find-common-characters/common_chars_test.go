@@ -1,6 +1,7 @@
 package _002_find_common_characters
 
 import (
+	"sort"
 	"testing"
 
 	"gotest.tools/v3/assert"
@@ -24,6 +25,7 @@ func TestCommonChars(t *testing.T) {
 
 	for _, testCase := range testCases {
 		actual := commonChars(testCase.got)
+		sort.Strings(actual)
 
 		assert.Check(t, is.DeepEqual(actual, testCase.want))
 	}
