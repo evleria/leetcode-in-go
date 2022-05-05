@@ -8,11 +8,7 @@ func maxOperations(nums []int, k int) int {
 			mapK[v] = val - 1
 			count++
 		} else {
-			if _, ok := mapK[k-v]; ok {
-				mapK[k-v] += 1
-			} else {
-				mapK[k-v] = 1
-			}
+			mapK[k-v]++
 		}
 	}
 	return count
