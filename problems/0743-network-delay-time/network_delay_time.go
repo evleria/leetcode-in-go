@@ -53,7 +53,7 @@ func networkDelayTime(times [][]int, n, k int) int {
 	for _, time := range times {
 		graph[time[0]-1][time[1]-1] = time[2]
 	}
-	for range make([]byte, n-1) {
+	for _ = range make([]byte, n-1) {
 		cind := min(graph[k], solved)
 		if cind == -1 {
 			return -1
